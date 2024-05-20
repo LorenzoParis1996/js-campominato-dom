@@ -1,6 +1,7 @@
 const gridSection = document.querySelector('section#grid');
 const playButton = document.getElementById('playbtn');
 
+
 playButton.addEventListener('click', function () {
     createNewGrid(100, gridSection);
 });
@@ -11,7 +12,6 @@ function createNewGrid(squareQuantity, containerNumber) {
         const squareArticle = document.createElement('article');
         squareArticle.classList.add('square');
 
-        gridSection.appendChild(squareArticle);
 
 
         const numberSquare = document.createElement('span');
@@ -24,8 +24,26 @@ function createNewGrid(squareQuantity, containerNumber) {
 
         squareArticle.addEventListener('click', function () {
             squareArticle.classList.add('active');
+
         });
 
+
+
+        gridSection.appendChild(squareArticle);
     };
 
 }
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let bombsArray = [];
+
+while (bombsArray.length < 16) {
+    let bomb = getRandomInt(1, 100);
+    if (!bombsArray.includes(bomb)) {
+        bombsArray.push(bomb);
+    }
+};
+console.log(bombsArray);

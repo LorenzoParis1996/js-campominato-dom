@@ -81,6 +81,11 @@ article.square.active {
     color: white;
 }
 
+article.square.bomb {
+    background-color: red;
+    color: white;
+}
+
 .square>span.number {
     display: none;
 }
