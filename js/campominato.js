@@ -1,6 +1,6 @@
 const gridSection = document.querySelector('section#grid');
 const playButton = document.getElementById('playbtn');
-const points = document.querySelector('h3');
+const points = document.querySelector('span');
 
 
 playButton.addEventListener('click', function () {
@@ -11,8 +11,7 @@ function createNewGrid(squareQuantity, containerNumber) {
     containerNumber.innerHTML = '';
 
 
-    let points = 0;
-    let trackingPoints = 0;
+    let score = 0;
     let bombsArray = [];
 
 
@@ -35,6 +34,8 @@ function createNewGrid(squareQuantity, containerNumber) {
                 squareArticle.classList.add('bomb');
             } else {
                 squareArticle.classList.add('active');
+                score++;
+                points.textContent = score;
             }
 
         });
