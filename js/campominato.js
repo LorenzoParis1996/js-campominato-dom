@@ -1,6 +1,7 @@
 const gridSection = document.querySelector('section#grid');
 const playButton = document.getElementById('playbtn');
 const points = document.querySelector('span');
+const loseGame = document.querySelector('p#lost');
 
 
 playButton.addEventListener('click', function () {
@@ -32,10 +33,12 @@ function createNewGrid(squareQuantity, containerNumber) {
         squareArticle.addEventListener('click', function () {
             if (bombsArray.includes(index + 1)) {
                 squareArticle.classList.add('bomb');
+                loseGame.classList.add('lose');
             } else {
                 squareArticle.classList.add('active');
                 score++;
                 points.textContent = score;
+
             }
 
         });

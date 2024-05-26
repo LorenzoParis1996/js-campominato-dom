@@ -100,6 +100,15 @@ h3 {
     text-align: center;
 }
 
+#lost {
+    display: none;
+}
+
+#lost.lose {
+    text-align: center;
+    display: block;
+}
+
 footer {
     padding: 1rem;
 }
