@@ -8,6 +8,12 @@ Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a c
 La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
+- una volta creata la griglia di gioco, mi creo una funzione per dei numeri random (che saranno le bombe)
+- (dentro function createNewGrid) mi creo un array vuoto e lo itero con un ciclo while per il numero di bombe richieste e gli la condizione in modo che siano numeri random unici (ovvero che in una cella ci sia massimo una bomba)
+- mi creo delle nuove classi che andro' ad aggiungere al event listener, in modo modo che quando clicco sulle celle, nel campo siano presenti sia celle active che celle bomb
+- creo una variabiale che poi richiamo nella condizione di active (dento l event listener) in cui la sommo per se stessa + 1, in modo da fare un punto per ogni cella active cliccata (che poi verra' mostrato anche nel dom)
+- richiamo un elemento dom, che quando si clicca una bomba, appare un messaggio in cui si indica la fine della partita
+
 
 BONUS:
 
