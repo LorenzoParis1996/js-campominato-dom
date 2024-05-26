@@ -12,7 +12,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 - (dentro function createNewGrid) mi creo un array vuoto e lo itero con un ciclo while per il numero di bombe richieste e gli la condizione in modo che siano numeri random unici (ovvero che in una cella ci sia massimo una bomba)
 - mi creo delle nuove classi che andro' ad aggiungere al event listener, in modo modo che quando clicco sulle celle, nel campo siano presenti sia celle active che celle bomb
 - creo una variabiale che poi richiamo nella condizione di active (dento l event listener) in cui la sommo per se stessa + 1, in modo da fare un punto per ogni cella active cliccata (che poi verra' mostrato anche nel dom)
-- richiamo un elemento dom, che quando si clicca una bomba, appare un messaggio in cui si indica la fine della partita
+- creo una variabile che in partenza e' falsa, e che poi diventera' vera, in modo che quando clicco su una bomba, mi restituisce il valore contrario (tramite condizione), e non posso piu' cliccare le celle sul campo
 
 
 BONUS:

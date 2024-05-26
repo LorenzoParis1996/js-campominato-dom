@@ -14,6 +14,7 @@ function createNewGrid(squareQuantity, containerNumber) {
 
     let score = 0;
     let bombsArray = [];
+    let gameOver = false;
 
 
     for (let index = 0; index < squareQuantity; index++) {
@@ -31,8 +32,14 @@ function createNewGrid(squareQuantity, containerNumber) {
 
 
         squareArticle.addEventListener('click', function () {
+            if (gameOver === true) {
+                return
+            }
+
+
             if (bombsArray.includes(index + 1)) {
                 squareArticle.classList.add('bomb');
+                gameOver = true;
                 loseGame.classList.add('lose');
             } else {
                 squareArticle.classList.add('active');
